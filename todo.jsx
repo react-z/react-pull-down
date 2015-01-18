@@ -1,3 +1,5 @@
+
+/** @jsx React.DOM */
 var TodoList = React.createClass({
   render: function() {
     var createItem = function(itemText) {
@@ -21,12 +23,12 @@ var TodoApp = React.createClass({
   },
   render: function() {
     return (
-      <div>
+      <div className="todo">
         <h3>TODO</h3>
         <TodoList items={this.state.items} />
-        <form className="form-inline" onSubmit={this.handleSubmit}>
-          <input className="form-control col-md-4" onChange={this.onChange} value={this.state.text} />
-          <button className="btn btn-default">{'Add #' + (this.state.items.length + 1)}</button>
+        <form onSubmit={this.handleSubmit}>
+          <input onChange={this.onChange} value={this.state.text} />
+          <button className="btn">{'Add #' + (this.state.items.length + 1)}</button>
         </form>
       </div>
     );
