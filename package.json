@@ -16,6 +16,11 @@
   "devDependencies": {
     "gulp": "*",
     "gulp-react": "*",
+    "gulp-connect": "*",
+    "gulp-watch": "*",
+    "gulp-less": "*",
+    "gulp-coffee": "*",
+    "gulp-open": "*",
     "mocha": "*"
   },
   "keywords": ["react-component", "react", "todo"]
