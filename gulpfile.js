@@ -1,22 +1,49 @@
-var gulp  = require('gulp');
-  react = require('gulp-react'),
-  connect = require('gulp-connect'),
-  watch = require('gulp-watch'),
-  less = require('gulp-less'),
-  coffee = require('gulp-coffee'),
-  open = require('gulp-open');
+'use strict';
+var gulp = require('gulp'),
+  connect = require('connect'),
+  connectreload = require('connect-livereload'),
+  livereload = require('gulp-livereload'),
+  serveStatic = require('serve-static'),
+  serveIndex = require('serve-index'),
+  opn = require('opn'),
+  react = require('gulp-react');
 
-gulp.task('webserver', function() {
-  connect.server({
-    livereload: true,
-    root: ['.', '.tmp']
-  });
+
+/* connect */
+gulp.task('connect', function () {
+  var app = connect()
+    .use(connectreload({port: 35729}))
+    .use(serveStatic('./'))
+    .use(serveIndex('./'));
+
+  require('http').createServer(app)
+    .listen(9000)
+    .on('listening', function () {
+      console.log('Started connect web server on http://localhost:9000');
+    });
 });
- 
-gulp.task('livereload', function() {
-  gulp.src(['./*.css', './*.js'])
-    .pipe(connect.reload());
+
+
+/* serve */
+gulp.task('serve', ['watch'], function () {
+    opn('http://localhost:9000');
 });
+
+/* watch */
+gulp.task('watch', ['connect'], function () {
+
+  livereload.listen();
+
+  gulp.watch([
+    './*.html',
+    './*.css',
+    './*.js'
+  ]).on('change', livereload.changed);  
+
+  gulp.watch('./*.jsx', ['react']);
+  
+});
+
 
 gulp.task('react', function () {
     return gulp.src('./todo.jsx')
@@ -26,35 +53,7 @@ gulp.task('react', function () {
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('open', function(){
-  gulp.src('./index.html')
-  .pipe(open());
+/* default */
+gulp.task('default', ['serve'], function () {
 });
-
-/*
-gulp.task('less', function() {
-  gulp.src('styles/main.less')
-    .pipe(less())
-    .pipe(gulp.dest('.tmp/styles'));
-});
- 
-gulp.task('coffee', function() {
-  gulp.src('scripts/*.coffee')
-    .pipe(coffee())
-    .pipe(gulp.dest('.tmp/scripts'));
-}); 
-*/
-
-/*
-gulp.task('watch', function() {	
-  gulp.watch('styles/*.less', ['less']);
-  gulp.watch('scripts/*.coffee', ['coffee']);
-})
-*/ 
-
-/*
-gulp.task('default', ['less', 'coffee', 'webserver', 'livereload', 'watch']);
-*/
-
-gulp.task('default', ['webserver', 'livereload', 'react', 'open']);
 
