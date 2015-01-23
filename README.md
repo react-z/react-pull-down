@@ -13,7 +13,7 @@ var React = require('react');
 var Todo = require('react-todo');
 
 React.renderComponent(
-    <Timer className="todo" data={[
+    <Todo className="todo" data={[
         { Name: 'Griffin Smith', Age: 18 },
         { Age: 23,  Name: 'Lee Salminen' },
         { Age: 28, Position: 'Developer' },
