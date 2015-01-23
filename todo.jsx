@@ -1,54 +1,6 @@
 /** @jsx React.DOM */
 
-var TodoList = React.createClass({
-  getInitialState: function() {
-    return {data: this.props.data};
-  },
-  render: function() {
-        var checks = this.state.data.map(function(d) {
-            return (
-                <div>
-                    <input type="checkbox" checked={d.selected} 
-                           onChange={this.changeSelection.bind(this, d.id)} />
-                    <span>{d.title}</span>                    
-                    <br />
-                </div>
-            );
-        }.bind(this));
-        return (
-              <div>
-                <input type="checkbox" ref="allSelector" 
-                  onChange={this.changeAllChecks} />
-                
-                <span className="complete-all">complete all</span>
-                <br />
-                {checks}
-              </div>
-        );
-    },
-    changeSelection: function(id) {
-        var state = this.state.data.map(function(d) {
-            return {
-                id: d.id,
-                selected: (d.id === id ? !d.selected : d.selected),
-                title: d.title
-            };
-        });
-
-        this.setState({ data: state });
-
-    },
-    changeAllChecks: function() {
-        var value = this.refs.allSelector.getDOMNode().checked;
-        var state = this.state.data.map(function(d) {
-            return { id: d.id, selected: value, title: d.title };
-        });
-        this.setState({ data: state });
-    }
-});
-
-
-var TodoApp = React.createClass({
+var Todo = React.createClass({
   getInitialState: function() {
     return {
           todoText: 'What needs to be done?',          
@@ -87,4 +39,4 @@ var TodoApp = React.createClass({
   }
 });
 
-React.renderComponent(<TodoApp />, document.getElementById("container"));
+React.renderComponent(<Todo />, document.getElementById("container"));

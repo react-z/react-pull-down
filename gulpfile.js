@@ -46,7 +46,7 @@ gulp.task('watch', ['connect'], function () {
 
 
 gulp.task('react', function () {
-    return gulp.src('./todo.jsx')
+    return gulp.src('./*.jsx')
         .pipe(react({
             harmony: true
         }))
