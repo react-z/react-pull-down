@@ -13,8 +13,10 @@ var React = require('react');
 var Todo = require('react-todo');
 var TODOS = [
   { id: 0, completed: false, title: 'this is the first todo' },
-  { id: 1, completed: false, title: 'this is the second todo' }
+  { id: 1, completed: false, title: 'this is the senond todo' }
 ];
+
+React.renderComponent(<Todo todos={TODOS} />, document.getElementById("container"));
 
 ```
 
