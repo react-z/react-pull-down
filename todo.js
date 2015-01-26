@@ -1,3 +1,8 @@
+/** @jsx React.DOM */
+var React = require('react');
+var TodoInput = require('./todo-input');
+var TodoList = require('./todo-list');
+
 var Todo = React.createClass({displayName: "Todo",
 	getInitialState: function() {
     return {
@@ -56,12 +61,4 @@ var Todo = React.createClass({displayName: "Todo",
 	}
 });
 
-var TODOS = [
-  { id: 0, completed: false, title: 'this is the first todo' },
-  { id: 1, completed: false, title: 'this is the senond todo' }
-];
-
-React.renderComponent(React.createElement(Todo, {todos: TODOS}), document.getElementById("container"));
-
-
-
+module.exports = Todo;

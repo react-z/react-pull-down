@@ -1,5 +1,7 @@
 /** @jsx React.DOM */
 
+var React = require('react');
+
 var TodoInput = React.createClass({
   onChange: function(e) {
     this.setProps({todoText: e.target.value});
@@ -38,3 +40,4 @@ var TodoInput = React.createClass({
   }
 });
 
+module.exports = TodoInput;

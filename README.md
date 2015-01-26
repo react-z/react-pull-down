@@ -11,15 +11,11 @@ React todo is a simple todo list component written in react.
 ```javascript
 var React = require('react');
 var Todo = require('react-todo');
+var TODOS = [
+  { id: 0, completed: false, title: 'this is the first todo' },
+  { id: 1, completed: false, title: 'this is the second todo' }
+];
 
-React.renderComponent(
-    <Todo className="todo" data={[
-        { Name: 'Griffin Smith', Age: 18 },
-        { Age: 23,  Name: 'Lee Salminen' },
-        { Age: 28, Position: 'Developer' },
-    ]} />,
-    document.getElementById('table')
-);
 ```
 
 ## License

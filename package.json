@@ -22,6 +22,11 @@
     "serve-index": "*",
     "opn": "*",
     "gulp-react": "*",
+    "react": "*",
+    "browserify": "*",
+    "watchify": "*",
+    "reactify": "*",
+    "vinyl-source-stream": "*",
     "mocha": "*"
   },
   "keywords": ["react-component", "react", "todo"]

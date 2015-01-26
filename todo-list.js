@@ -1,5 +1,7 @@
 /** @jsx React.DOM */
 
+var React = require('react');
+
 var TodoList = React.createClass({displayName: "TodoList",
   render: function() {
         var todoList = this.props.todos.map(function(todo) {
@@ -45,3 +47,4 @@ var TodoList = React.createClass({displayName: "TodoList",
     }
 });
 
+module.exports = TodoList;
