@@ -1,42 +1,67 @@
-/** @jsx React.DOM */
-
 var Todo = React.createClass({
-  getInitialState: function() {
+	getInitialState: function() {
     return {
-          todoText: 'What needs to be done?',          
-          data: [
-              { id: 1, selected: false, title: 'this is 1 todo' },
-              { id: 2, selected: false, title: 'this is a second todo' }
-          ]
+      todos: this.props.todos,
+      todoText: 'What needs to be done?'
+    };
+  },
+  addTodo: function(text) {
+    this.setState({
+      todoText: text
+    });
+    var newTodos = this.state.todos.slice();    
+    newTodos.push({id: this.state.todos.length + 1, completed: false, title: text});
+    this.setState({
+      todos: newTodos
+    });
+  },
+  toggleComplete: function(id) {
+    var newTodos = this.state.todos.map(function(todo) {
+      return {
+        id: todo.id,
+        completed: (todo.id === id ? !todo.completed : todo.completed),
+        title: todo.title
       };
+    });        
+    this.setState({
+      todos: newTodos
+    });
   },
-  onChange: function(e) {
-    this.setState({todoText: e.target.value});
+  setAllComplete: function(value) {
+    var newTodos = this.state.todos.map(function(todo) {
+      return { 
+      	id: todo.id, 
+      	completed: value, 
+      	title: todo.title };
+    });
+    this.setState({
+      todos: newTodos
+    });
   },
-  onFocus: function(e) {
-    this.setState({todoText: ''});
-  },
-  handleSubmit: function(e) {
-    e.preventDefault();
-    this.state.data.push({id: this.state.data.length + 1, title: this.state.todoText, selected: false })
-    this.state.todoText = 'What needs to be done?';
-    this.setState({todoText: this.state.todoText, data: this.state.data});
-  },
-  render: function() {
-    return (
-      <div className="todo">
-        <h3>todos</h3>
+	render: function() {
+		return (
+			<div className="todo">
+			
+				<TodoInput 
+				  todoText={this.state.todoText} 
+				  onaddTodo={this.addTodo} />
 
-        <TodoList data={this.state.data} />
-
-          <input className="todo-text" onFocus={this.onFocus} onChange={this.onChange} value={this.state.todoText} />
-          <button onClick={this.handleSubmit} className="btn">
-            {'Add #' + (this.state.data.length + 1)}
-          </button>
-
-      </div>
-    );
-  }
+				<TodoList 
+				  todos={this.state.todos} 
+				  onToggleComplete={this.toggleComplete}
+				  onSetAllComplete={this.setAllComplete}
+				/>
+			</div>
+		)
+	}
 });
 
-React.renderComponent(<Todo />, document.getElementById("container"));
+var TODOS = [
+  { id: 0, completed: false, title: 'this is the first todo' },
+  { id: 1, completed: false, title: 'this is the senond todo' }
+];
+
+React.renderComponent(<Todo todos={TODOS} />, document.getElementById("container"));
+
+
+
