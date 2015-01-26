@@ -19,6 +19,15 @@ var TODOS = [
 React.renderComponent(<Todo todos={TODOS} />, document.getElementById("container"));
 
 ```
+## Development
+
+Initial set up, run:
+    
+    npm install
+
+For watch on files, live reload, JSX transpiling and browserify, run:
+
+    gulp
 
 ## License
 
