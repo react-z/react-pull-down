@@ -6,4 +6,4 @@ var TODOS = [
   { id: 1, completed: false, title: 'this is the second todo' }
 ];
 
-React.renderComponent(React.createElement(Todo, {todos: TODOS}), document.getElementById("container"));
+React.render(React.createElement(Todo, {todos: TODOS}), document.getElementById("container"));
