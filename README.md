@@ -2,6 +2,8 @@
 
 React todo is a simple todo list component written in react.
 
+![](example/screenshot.png)
+
 ## Installation
 
 `npm install react-todo --save`
@@ -19,6 +21,11 @@ var TODOS = [
 React.renderComponent(<Todo todos={TODOS} />, document.getElementById("container"));
 
 ```
+
+## Styles
+
+Include the minimal todo.css styles, or customize with your own styling
+
 ## Development
 
 Initial set up, run:

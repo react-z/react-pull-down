@@ -1,7 +1,13 @@
 /** @jsx React.DOM */
+
 var React = require('react');
-var TodoInput = require('./todo-input');
-var TodoList = require('./todo-list');
+var TodoInput = require('./todo-input.jsx');
+var TodoList = require('./todo-list.jsx');
+
+/**
+ * Todo module
+ * A simple todo component.
+**/
 
 var Todo = React.createClass({
 	getInitialState: function() {
@@ -20,6 +26,10 @@ var Todo = React.createClass({
       todos: newTodos
     });
   },
+  /* 
+   * Toggle the complete state for the todo by id.
+   * @param {number} id - Id of the todo to update
+  */
   toggleComplete: function(id) {
     var newTodos = this.state.todos.map(function(todo) {
       return {
@@ -32,7 +42,11 @@ var Todo = React.createClass({
       todos: newTodos
     });
   },
-  setAllComplete: function(value) {
+  /** 
+   * Set all todos to complete or incomplete based on the input value.
+   * @param {boolean} value - The value to toggle, complete = true
+  **/
+  toggleAllComplete: function(value) {
     var newTodos = this.state.todos.map(function(todo) {
       return { 
       	id: todo.id, 
@@ -54,7 +68,7 @@ var Todo = React.createClass({
 				<TodoList 
 				  todos={this.state.todos} 
 				  onToggleComplete={this.toggleComplete}
-				  onSetAllComplete={this.setAllComplete}
+				  onToggleAllComplete={this.toggleAllComplete}
 				/>
 			</div>
 		)

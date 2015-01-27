@@ -1,5 +1,5 @@
 var React = require('react');
-var Todo = require('../todo');
+var Todo = require('../jsx/todo.jsx');
 
 var TODOS = [
   { id: 0, completed: false, title: 'this is the first todo' },

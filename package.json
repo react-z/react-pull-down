@@ -2,7 +2,7 @@
   "name": "react-todo",
   "version": "0.0.1",
   "description": "a simple todo component",
-  "main": "todo.js",
+  "main": "jsx/todo.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/StevenIseki/react-todo.git"

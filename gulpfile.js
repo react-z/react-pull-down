@@ -28,7 +28,6 @@ gulp.task('connect', function () {
 
 /* browserify */ 
 gulp.task('browserify', function() {
-
   var bundler = browserify({
     entries: ['./example/example.js'], // Only need initial file
     transform: [reactify], // Convert JSX to javascript
@@ -52,7 +51,7 @@ gulp.task('browserify', function() {
 
 
 /* serve */
-gulp.task('serve', ['watch', 'browserify'], function () {
+gulp.task('serve', ['watch', 'browserify','react'], function () {
     opn('http://localhost:9000/example/example.html');
 });
 
@@ -64,20 +63,21 @@ gulp.task('watch', ['connect'], function () {
   gulp.watch([
     './*.html',
     './*.css',
-    './*.js'
+    './js/*.js'
   ]).on('change', livereload.changed);  
 
-  gulp.watch('./*.jsx', ['react']);
+  gulp.watch('./jsx/*.jsx', ['react']);
   
 });
 
 
 gulp.task('react', function () {
-    return gulp.src('./*.jsx')
-        .pipe(react({
-            harmony: true
-        }))
-        .pipe(gulp.dest('./'));
+
+  return gulp.src('./jsx/*.jsx')
+    .pipe(react({
+      harmony: true
+    }))
+    .pipe(gulp.dest('./js/'));
 });
 
 /* default */

@@ -1,5 +1,10 @@
 /** @jsx React.DOM */
 
+/**
+ * Todo Input
+ * A todo input box
+**/
+
 var React = require('react');
 
 var TodoInput = React.createClass({
