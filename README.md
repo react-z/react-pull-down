@@ -1,6 +1,6 @@
 # react-todo
 
-React todo is a simple todo list component using react.js.
+react-todo is a simple todo list component using react.js.
 
 ![](example/screenshot.png)
 
