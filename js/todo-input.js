@@ -8,9 +8,6 @@
 var React = require('react');
 
 var TodoInput = React.createClass({displayName: "TodoInput",
-  onChange: function(e) {
-    this.setProps({todoText: e.target.value});
-  },
   onFocus: function(e) {
     e.target.value = '';
   },
@@ -28,9 +25,7 @@ var TodoInput = React.createClass({displayName: "TodoInput",
         React.createElement("input", {
           className: "todo-text", 
           ref: "textInput", 
-          onFocus: this.onFocus, 
-          onChange: this.onChange, 
-          value: this.props.todoText}), 
+          onFocus: this.onFocus}), 
 
           React.createElement("button", {
             onClick: this.submit, 

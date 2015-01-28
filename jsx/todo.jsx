@@ -42,6 +42,10 @@ var Todo = React.createClass({
       todos: newTodos
     });
   },
+  changeTodo: function (value) {
+    console.log(value);
+    this.state.todoText = value;
+  },
   /** 
    * Set all todos to complete or incomplete based on the input value.
    * @param {boolean} value - The value to toggle, complete = true
@@ -63,7 +67,8 @@ var Todo = React.createClass({
 			
 				<TodoInput 
 				  todoText={this.state.todoText} 
-				  onaddTodo={this.addTodo} />
+				  onaddTodo={this.addTodo} 
+          onChangeTodo={this.changeTodo} />
 
 				<TodoList 
 				  todos={this.state.todos} 
