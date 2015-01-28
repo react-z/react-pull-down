@@ -63,7 +63,7 @@ var Todo = React.createClass({
   },
 	render: function() {
 		return (
-			<div className="todo">
+			<div className="react-todo">
 			
 				<TodoInput 
 				  todoText={this.state.todoText} 
