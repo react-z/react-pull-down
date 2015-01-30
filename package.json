@@ -1,6 +1,6 @@
 {
   "name": "react-todo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a simple todo component",
   "main": "js/todo.js",
   "repository": {
@@ -29,5 +29,9 @@
     "vinyl-source-stream": "*",
     "mocha": "*"
   },
-  "keywords": ["react-component", "react", "todo"]
+  "keywords": [
+    "react-component",
+    "react",
+    "todo"
+  ]
 }
