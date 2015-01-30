@@ -1,36 +1,13 @@
 .react-todo {
-  font-family: Vollkorn;
+  font-size: 150%;
+  font-weight: 150;
+  line-height: 1.5;
+  color: #666;
+  margin: 0.25em;
 }
-
-.react-todo ul{
-  font-size: 18px;
-  list-style-type: none;
-  margin: 0px;
-  padding-left: 5px;
-}
-
-.react-todo h3 {
+.react-todo h2 {
   color: #03CC85;
-  font-size: 24px;
   margin: 10px;
-}
-
-.react-todo .btn {
-  color: #343434;
-  background-color: #03CC85;
-  padding: 10px;
-  width: 200px;
-  border: 0;
-  box-shadow: 0px 5px 0px #03CC85;
-  border-radius: 5px;
-  color: #343434;
-  font-weight: bold;
-}
-
-.react-todo input.todo-text {
-  margin: 10px;
-  padding: 10px;
-  width: 200px;
 }
 
 input[type="checkbox"] {
@@ -42,4 +19,25 @@ input[type="checkbox"] {
   display: inline-block;
   font-weight: bold;
   margin-bottom: 15px
+}
+
+
+.react-todo .button-secondary {
+  background: #fff;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+.react-todo .pure-button {
+  font-size: 120%;
+  margin: 0.25em;
+  font-weight: 250;
+}
+
+.react-todo .input-text {
+  font-size: 120%;
+  font-weight: 100;
+  line-height: 1.5;
+  color: #666;
+  margin: 0.25em;
 }

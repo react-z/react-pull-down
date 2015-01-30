@@ -20,16 +20,16 @@ var TodoInput = React.createClass({displayName: "TodoInput",
     return (
       React.createElement("div", {className: "todo-input"}, 
         
-        React.createElement("h3", null, "todos"), 
+        React.createElement("h2", null, "todos"), 
 
         React.createElement("input", {
-          className: "todo-text", 
+          className: "input-text", 
           ref: "textInput", 
           onFocus: this.onFocus}), 
 
           React.createElement("button", {
             onClick: this.submit, 
-            className: "btn"}, 
+            className: "pure-button button-secondary"}, 
             
             "Add a new todo"
           

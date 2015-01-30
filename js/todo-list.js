@@ -13,6 +13,7 @@ var TodoList = React.createClass({displayName: "TodoList",
       return (
               React.createElement("div", null, 
                 React.createElement("input", {
+                  className: "pure-checkbox", 
                   type: "checkbox", 
                   checked: todo.completed, 
                   onChange: this.toggle.bind(this, todo.id)}), 

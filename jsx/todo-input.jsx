@@ -20,16 +20,16 @@ var TodoInput = React.createClass({
     return (
       <div className="todo-input">
         
-        <h3>todos</h3>
+        <h2>todos</h2>
 
         <input 
-          className="todo-text"
+          className="input-text"
           ref="textInput"
           onFocus={this.onFocus} />
 
           <button 
             onClick={this.submit} 
-            className="btn">
+            className="pure-button button-secondary">
             
             Add a new todo
           

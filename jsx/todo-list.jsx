@@ -13,6 +13,7 @@ var TodoList = React.createClass({
       return (
               <div>
                 <input 
+                  className="pure-checkbox"
                   type="checkbox" 
                   checked={todo.completed} 
                   onChange={this.toggle.bind(this, todo.id)}/>
