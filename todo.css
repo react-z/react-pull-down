@@ -1,10 +1,11 @@
 .react-todo {
-  font-size: 150%;
-  font-weight: 150;
+  font-size: 120%;
+  font-weight: 100;
   line-height: 1.5;
   color: #666;
   margin: 0.25em;
 }
+
 .react-todo h2 {
   color: #03CC85;
   margin: 10px;
@@ -28,14 +29,14 @@ input[type="checkbox"] {
   border: 1px solid #ddd;
 }
 
-.react-todo .pure-button {
-  font-size: 120%;
-  margin: 0.25em;
-  font-weight: 250;
+.react-todo button {
+  font-size: 100%;
+  margin: 0.2em;
+  font-weight: 200;
 }
 
 .react-todo .input-text {
-  font-size: 120%;
+  font-size: 100%;
   font-weight: 100;
   line-height: 1.5;
   color: #666;

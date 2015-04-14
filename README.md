@@ -24,7 +24,8 @@ React.renderComponent(<Todo todos={TODOS} />, document.getElementById("container
 
 ## Styles
 
-Include the minimal todo.css styles, or customize with your own styling
+react-todo can be used with your own custom styles. A minimal todo.css style sheet is included as a guide.
+
 
 ## Development
 

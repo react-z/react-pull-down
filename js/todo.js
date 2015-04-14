@@ -1,8 +1,8 @@
 /** @jsx React.DOM */
 
 var React = require('react');
-var TodoInput = require('./todo-input.js');
-var TodoList = require('./todo-list.js');
+var TodoInput = require('./todo-input.jsx');
+var TodoList = require('./todo-list.jsx');
 
 /**
  * Todo module
