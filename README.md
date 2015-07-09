@@ -25,7 +25,11 @@ React.render( React.createElement(Pulr, null) ,document.getElementById("containe
 
 - <b>you need some very minimal css</b>
 
-[style.css](https://raw.githubusercontent.com/isekivacenz/react-pulr/master/example/styles.css)
+[style.css](https://github.com/StevenIseki/react-pulr/blob/master/example/styles.css)
+
+- <b>check out the example</b>
+
+[example](https://github.com/StevenIseki/react-pulr/tree/master/example)
 
 ## License
 
