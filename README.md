@@ -1,37 +1,31 @@
-# react-todo
+# react-pulr
 
-react-todo is a simple todo list component using react.js.
+react-pulr uses pulr, a very minimal touch enabled pull down control
 
-![](example/screenshot.png)
+just 110 lines of es5 code :) Imagine if we wrote it in es6?
+
+Uses hammer.js so it works the same on the web as on mobile.
 
 ## Installation
 
-`npm install react-todo --save`
+`npm install react-pulr --save`
+
+<i>react-pulr comes with pulr as a dependency</i>
 
 ## Usage
 
-```javascript
-var React = require('react');
-var Todo = require('react-todo');
-var TODOS = [
-  { id: 0, completed: false, title: 'this is the first todo' },
-  { id: 1, completed: false, title: 'this is the senond todo' }
-];
+Use browserify or webpack to bundle your main file below to bundle.js
 
-React.renderComponent(<Todo todos={TODOS} />, document.getElementById("container"));
+```javascript
+var Pulr = require('../js/react-pulr');
+
+React.render( React.createElement(Pulr, null) ,document.getElementById("container") );
 
 ```
 
-## Styles
+- <b>you need some very minimal css</b>
 
-react-todo can be used with your own custom styles. A minimal todo.css style sheet is included as a guide.
-
-
-## Development
-
-Initial set up, run:
-    
-    npm install
+[style.css](https://raw.githubusercontent.com/isekivacenz/react-pulr/master/example/styles.css)
 
 ## License
 

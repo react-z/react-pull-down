@@ -1,37 +1,39 @@
 {
-  "name": "react-todo",
-  "version": "0.0.3",
-  "description": "a simple todo component",
-  "main": "js/todo.js",
+  "name": "react-pulr",
+  "version": "1.0.0",
+  "description": "a simple react pull down component using pulr",
+  "main": "js/react-pulr.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/StevenIseki/react-todo.git"
+    "url": "https://github.com/StevenIseki/react-pulr.git"
   },
-  "author": "Steven Iseki",
-  "license": "MIT",
-  "homepage": "https://github.com/StevenIseki/react-todo.git",
   "peerDependencies": {
     "react": "*"
   },
-  "devDependencies": {
-    "gulp": "*",
-    "connect": "*",
-    "connect-livereload": "*",
-    "gulp-livereload": "*",
-    "serve-static": "*",
-    "serve-index": "*",
-    "opn": "*",
-    "gulp-react": "*",
-    "react": "*",
-    "browserify": "*",
-    "watchify": "*",
-    "reactify": "*",
-    "vinyl-source-stream": "*",
-    "mocha": "*"
+  "dependencies": {
+    "pulr": "^1.0.0"
   },
   "keywords": [
-    "react-component",
     "react",
-    "todo"
-  ]
+    "react-pulr",
+    "react-pullr",
+    "react pull down",
+    "react-pull-down",
+    "react-pull",
+    "react-pull-refresh",
+    "react slide down",
+    "react pull down control",
+    "swipe",
+    "react component",
+    "react-component",
+    "minimal",
+    "minimal pull-down"
+  ],
+  "author": {
+    "name": "Steven Iseki James Z"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StevenIseki/react-pulr/issues"
+  }
 }
