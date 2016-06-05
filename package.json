@@ -1,6 +1,6 @@
 {
   "name": "react-pulr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a simple react pull down component using pulr",
   "main": "lib/ReactPulr.js",
   "repository": {
