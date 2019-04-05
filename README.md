@@ -1,8 +1,8 @@
-## react-swipe
+## react-z-pull-down
 
-[![npm version](https://badge.fury.io/js/react-pull-down.svg)](https://badge.fury.io/js/react-pull-down)
+[![npm version](https://badge.fury.io/js/react-z-pull-down.svg)](https://badge.fury.io/js/react-pull-down)
 
-![](https://raw.githubusercontent.com/react-z/react-pull-down/master/example/screenshot.gif)
+![](https://raw.githubusercontent.com/react-z/react-z-pull-down/master/example/screenshot.gif)
 
 A simple react pull down component
 
