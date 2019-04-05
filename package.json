@@ -1,7 +1,7 @@
 {
   "name": "react-pull-down",
   "version": "1.0.1",
-  "description": "A simple react pull down component using pulr",
+  "description": "A simple react pull down component",
   "main": "lib/ReactPullDown.js",
   "repository": {
     "type": "git",
@@ -45,8 +45,6 @@
   },
   "keywords": [
     "react",
-    "react-pulr",
-    "react-pullr",
     "react pull down",
     "react-pull-down",
     "react-pull",

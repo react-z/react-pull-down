@@ -15,27 +15,22 @@ yarn add react-z-pull-down
 ## Use
 
 ``` js
-import Pulr from 'react-z-pull-down'
+import PullDown from 'react-z-pull-down'
 import ReactDOM from 'react-dom'
 import React, { Component } from 'react'
 
 class TestComponent extends Component {
-  render () {
+  render() {
     return (
       <div>
-        <Pulr />
-          <div class="below-content">
-            You can pull me down!
-          </div>
+        <PullDown />
+        <div>You can pull me down!</div>
       </div>
     )
   }
 }
 
-ReactDOM.render(
-  <TestComponent />,
-  document.getElementById('root')
-)
+ReactDOM.render(<TestComponent />, document.getElementById('root'))
 ```
 
 ## Development
