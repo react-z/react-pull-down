@@ -1,42 +1,55 @@
-# react-pulr
+## react-swipe
 
-react-pulr is a very minimal touch enabled pull down control
+[![npm version](https://badge.fury.io/js/react-pull-down.svg)](https://badge.fury.io/js/react-pull-down)
 
-It uses hammer.js so works the same on the web as on mobile.
+![](https://raw.githubusercontent.com/react-z/react-pull-down/master/example/screenshot.gif)
 
-## Installation
+A simple react pull down component
 
-`npm install react-pulr --save`
+## Install
 
-<i>react-pulr comes with pulr as a dependency</i>
-
-## Versions
-
-#### `1.0.0` uses React `^0.13.0`
-
-#### `1.0.1` uses React `^0.15.1`
-
-## Usage
-
-Use browserify or webpack to bundle your main file below to bundle.js
-
-```javascript
-var Pulr = require('../js/react-pulr');
-
-React.render( <Pulr />,document.getElementById("container") );
-
+``` js
+yarn add react-z-pull-down
 ```
 
-- <b>you need some very minimal css</b>
+## Use
 
-[style.css](https://github.com/StevenIseki/react-pulr/blob/master/example/public/styles.css)
+``` js
+import Pulr from 'react-z-pull-down'
+import ReactDOM from 'react-dom'
+import React, { Component } from 'react'
+
+class TestComponent extends Component {
+  render () {
+    return (
+      <div>
+        <Pulr />
+          <div class="below-content">
+            You can pull me down!
+          </div>
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(
+  <TestComponent />,
+  document.getElementById('root')
+)
+```
 
 ## Development
+    yarn
+    npm run dev
 
-    npm install
-    npm test
+## Build
+    yarn
     npm run build
-    npm start
+    npm login
+    npm version patch
+    git add -A
+    git push origin master
+    npm publish
 
 ## License
 

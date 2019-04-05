@@ -1,6 +1,6 @@
-import Pulr from '../lib/ReactPulr' // 'react-pulr'
+import Pulr from '../src/ReactPulr' // 'react-pulr'
 import ReactDOM from 'react-dom'
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 
 class TestComponent extends Component {
 
@@ -8,8 +8,8 @@ class TestComponent extends Component {
     return (
       <div>
         <Pulr />
-          <div class="below-content">
-              You can push me down!
+          <div>
+              You can pull me down!
           </div>
       </div>
     )

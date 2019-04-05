@@ -1,6 +1,6 @@
-var pulr = function (opts) {
+import Hammer from 'hammerjs'
 
-    var Hammer = require("hammerjs");
+var pulr = function (opts) {
 
     /**
      * the default parameters for the module
@@ -101,9 +101,7 @@ var pulr = function (opts) {
         pan.pulrHeight = el.offsetHeight
    };
 
-   /* initialize pulr */
    init(opts)
-
 }
 
 module.exports = pulr;
